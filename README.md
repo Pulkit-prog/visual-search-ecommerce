@@ -59,14 +59,14 @@ An AI-powered visual search system that allows users to search for products usin
 ## Project Structure
 
 visual-search-ecommerce/
+
 │
-├── backend/ # FastAPI backend and ML pipeline
-├── frontend/ # Streamlit UI
-├── scripts/ # Dataset preparation scripts
-├── docker-compose.yml # (Planned for deployment)
+├── backend/              # FastAPI backend and ML pipeline
+├── frontend/             # Streamlit UI
+├── scripts/              # Dataset preparation scripts
+├── docker-compose.yml    # (Planned for deployment)
 ├── README.md
 └── .gitignore
-
 
 ---
 
