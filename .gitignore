@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.env*
+.venv/
+catalog_images/
+*.index
+backend/app/data/*
+!backend/app/data/.gitkeep
+
+Streamlit
+
+.streamlit/
+
+OS
+
+Thumbs.db
