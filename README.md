@@ -1,54 +1,72 @@
-# AI Visual Search Engine for E-Commerce
+# 🛍️ AI Visual Search Engine for E-Commerce
 
-An AI-powered visual search system that allows users to search for products using images instead of text. The system extracts deep visual features and retrieves similar products from a catalog using efficient similarity search techniques.
-
----
-
-## Tech Stack
-
-- **Backend:** FastAPI  
-- **Frontend:** Streamlit  
-- **Feature Extraction:** ResNet50 (PyTorch)  
-- **Similarity Search:** FAISS  
-- **Containerization:** Docker *(Planned)*  
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![FastAPI](https://img.shields.io/badge/Backend-FastAPI-green)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red)
+![FAISS](https://img.shields.io/badge/Search-FAISS-orange)
+![Status](https://img.shields.io/badge/Status-Phase%206%20Completed-success)
+![License](https://img.shields.io/badge/License-Academic-lightgrey)
 
 ---
 
-## Working Pipeline
+## 📌 Overview
 
-1. User uploads an image via the Streamlit interface  
-2. Image is sent to FastAPI backend  
-3. ResNet50 extracts feature embeddings  
-4. FAISS performs similarity search  
-5. Top similar products are returned and displayed  
+An AI-powered visual search system that allows users to search for products using images instead of text.  
+The system extracts deep visual features and retrieves similar products from a catalog using efficient similarity search techniques.
 
 ---
 
-## Project Progress (As per Timeline)
+## 🧰 Tech Stack
 
-### ✅ Phase 1 – Requirement Analysis (Completed)
+- 🔧 **Backend:** FastAPI  
+- 🎨 **Frontend:** Streamlit  
+- 🧠 **Feature Extraction:** ResNet50 (PyTorch)  
+- 🔍 **Similarity Search:** FAISS  
+- 📦 **Containerization:** Docker *(Planned)*  
+
+---
+
+## ⚙️ Working Pipeline
+
+User Image Upload  
+↓  
+Streamlit Frontend  
+↓  
+FastAPI Backend  
+↓  
+ResNet50 (Feature Extraction)  
+↓  
+FAISS (Similarity Search)  
+↓  
+Top Similar Products Displayed  
+
+---
+
+## 📊 Project Progress (As per Timeline)
+
+### ✅ Phase 1 – Requirement Analysis
 - Identified limitations of text-based product search  
 - Defined objectives and system scope  
 
-### ✅ Phase 2 – System Design (Completed)
+### ✅ Phase 2 – System Design
 - Designed architecture (FastAPI + FAISS + ResNet50 + Streamlit)  
 - Planned data flow and modular structure  
 
-### ✅ Phase 3 – Dataset Preparation (Completed)
+### ✅ Phase 3 – Dataset Preparation
 - Prepared and structured product image dataset  
 - Implemented scripts for dataset handling  
 
-### ✅ Phase 4 – Feature Extraction & Indexing (Completed)
+### ✅ Phase 4 – Feature Extraction & Indexing
 - Used ResNet50 for feature extraction  
 - Generated image embeddings  
 - Built FAISS index for efficient similarity search  
 
-### ✅ Phase 5 – Backend API (Completed)
+### ✅ Phase 5 – Backend API
 - Developed FastAPI backend  
 - Created endpoints for image upload and search  
 - Integrated embedding + FAISS pipeline  
 
-### ✅ Phase 6 – Frontend Development (Completed)
+### ✅ Phase 6 – Frontend Development
 - Built Streamlit-based user interface  
 - Implemented image upload functionality  
 - Displayed similar product results  
@@ -56,21 +74,20 @@ An AI-powered visual search system that allows users to search for products usin
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
-visual-search-ecommerce/
-
-│
-├── backend/              # FastAPI backend and ML pipeline
-├── frontend/             # Streamlit UI
-├── scripts/              # Dataset preparation scripts
-├── docker-compose.yml    # (Planned for deployment)
-├── README.md
-└── .gitignore
+    visual-search-ecommerce/
+    │
+    ├── backend/              # FastAPI backend and ML pipeline
+    ├── frontend/             # Streamlit UI
+    ├── scripts/              # Dataset preparation scripts
+    ├── docker-compose.yml    # (Planned for deployment)
+    ├── README.md
+    └── .gitignore
 
 ---
 
-## Upcoming Work
+## 🚀 Upcoming Work
 
 - Integration testing and performance optimization  
 - Dockerization and deployment  
@@ -78,27 +95,48 @@ visual-search-ecommerce/
 
 ---
 
-## How to Run
+## ▶️ How to Run
 
 ### 🔹 Backend
 
-```bash
--cd backend
--pip install -r requirements.txt
--uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+    cd backend
+    pip install -r requirements.txt
+    uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+👉 API Docs: http://localhost:8000/docs  
+
+---
 
 ### 🔹 Frontend
 
-```bash
--cd frontend
--pip install -r requirements.txt
--streamlit run streamlit_app.py
+    cd frontend
+    pip install -r requirements.txt
+    streamlit run streamlit_app.py
 
-###👉 Streamlit UI: http://localhost:8501
+👉 Streamlit UI: http://localhost:8501  
 
-##Notes
--Dataset images are not included in the repository (ignored via .gitignore)
--FAISS index files are generated dynamically
--Runs fully on CPU (no GPU required)
+---
 
+## 📝 Notes
+
+- Dataset images are not included in the repository (ignored via .gitignore)  
+- FAISS index files are generated dynamically  
+- Runs fully on CPU (no GPU required)  
+
+---
+
+## 👥 Team Members
+
+- **Pulkit Pandey** – Backend & Integration  
+- **Member 2** – Frontend Development  
+- **Member 3** – ML & Dataset Processing  
+
+---
+
+## ⭐ Key Highlights
+
+- 🔎 Image-based product search (no text needed)  
+- 🧠 Deep learning + vector similarity search  
+- ⚡ Fast and scalable architecture  
+- 🛒 Real-world e-commerce use case  
 
