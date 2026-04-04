@@ -123,15 +123,7 @@ Top Similar Products Displayed
 - FAISS index files are generated dynamically  
 - Runs fully on CPU (no GPU required)  
 
----
 
-## 👥 Team Members
-
-- **Pulkit Pandey** – Backend & Integration  
-- **Member 2** – Frontend Development  
-- **Member 3** – ML & Dataset Processing  
-
----
 
 ## ⭐ Key Highlights
 
