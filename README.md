@@ -1,67 +1,104 @@
-AI Visual Search Engine for E-Commerce
-A visual search engine for e-commerce that allows users to search for products using images. Users can upload an image, and the system returns visually similar products from the catalog using advanced machine learning techniques.
+# AI Visual Search Engine for E-Commerce
 
-Tech Stack
-Backend: FastAPI
-Frontend: Streamlit
-Feature Extraction: ResNet50 (via PyTorch)
-Similarity Search: FAISS
-Containerization: Docker
-Working Pipeline
-Image Upload: User uploads a query image
-Feature Extraction: ResNet50 extracts visual features from the image
-Similarity Search: FAISS performs vector similarity search against the product catalog
-Results: Returns the most similar products with similarity scores
-Setup Instructions
-Option 1: Run with Docker (Recommended)
-# Build and run all services
-docker-compose up --build
-Access the application:
+An AI-powered visual search system that allows users to search for products using images instead of text. The system extracts deep visual features and retrieves similar products from a catalog using efficient similarity search techniques.
 
-Backend API: http://localhost:8000/docs
-Frontend: http://localhost:8501
-Option 2: Run Locally
-Backend
-cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-Frontend
-cd frontend
-pip install -r requirements.txt
-streamlit run streamlit_app.py
-Project Structure and Development Phases
-This project structure reflects a systematic development approach:
+---
 
-Phase 1-2: Planning - Project setup, requirements analysis, and architecture design
-Phase 3: Dataset Preparation - scripts/download_sample_catalog.py for preparing product catalog data
-Phase 4: Feature Extraction & Indexing - backend/app/services/embedder.py and indexer.py for building FAISS index
-Phase 5: Backend API - backend/app/main.py, schemas.py, and API endpoints in FastAPI
-Phase 6: Frontend - frontend/streamlit_app.py for user interface
-Phase 7: Integration - Connecting frontend to backend, testing end-to-end flow
-Phase 8: Dockerization - Dockerfiles and docker-compose.yml for containerization
-Notes
-Dataset images are not included in the repository (ignored via .gitignore)
-FAISS index files are generated at runtime and also ignored
-Use the provided scripts to download sample catalog data for testing
-How to use
-Open Streamlit UI
-Click Rebuild Index (first time)
-Upload an image
-Click Search
-Non-Docker Run (Optional)
-Backend
-cd backend
-python -m venv .venv
-# Windows: .venv\\Scripts\\activate
-# Linux/Mac: source .venv/bin/activate
-pip install -r requirements.txt
-uvicorn app.main:app --host 0.0.0.0 --port 8000
-Frontend
-cd frontend
-python -m venv .venv
-pip install -r requirements.txt
-streamlit run streamlit_app.py
-Notes
-No paid APIs used
-Runs fully on CPU
-Works with your own product images
+## Tech Stack
+
+- **Backend:** FastAPI  
+- **Frontend:** Streamlit  
+- **Feature Extraction:** ResNet50 (PyTorch)  
+- **Similarity Search:** FAISS  
+- **Containerization:** Docker *(Planned)*  
+
+---
+
+## Working Pipeline
+
+1. User uploads an image via the Streamlit interface  
+2. Image is sent to FastAPI backend  
+3. ResNet50 extracts feature embeddings  
+4. FAISS performs similarity search  
+5. Top similar products are returned and displayed  
+
+---
+
+## Project Progress (As per Timeline)
+
+### ✅ Phase 1 – Requirement Analysis (Completed)
+- Identified limitations of text-based product search  
+- Defined objectives and system scope  
+
+### ✅ Phase 2 – System Design (Completed)
+- Designed architecture (FastAPI + FAISS + ResNet50 + Streamlit)  
+- Planned data flow and modular structure  
+
+### ✅ Phase 3 – Dataset Preparation (Completed)
+- Prepared and structured product image dataset  
+- Implemented scripts for dataset handling  
+
+### ✅ Phase 4 – Feature Extraction & Indexing (Completed)
+- Used ResNet50 for feature extraction  
+- Generated image embeddings  
+- Built FAISS index for efficient similarity search  
+
+### ✅ Phase 5 – Backend API (Completed)
+- Developed FastAPI backend  
+- Created endpoints for image upload and search  
+- Integrated embedding + FAISS pipeline  
+
+### ✅ Phase 6 – Frontend Development (Completed)
+- Built Streamlit-based user interface  
+- Implemented image upload functionality  
+- Displayed similar product results  
+- Connected frontend with backend APIs  
+
+---
+
+## Project Structure
+
+visual-search-ecommerce/
+│
+├── backend/ # FastAPI backend and ML pipeline
+├── frontend/ # Streamlit UI
+├── scripts/ # Dataset preparation scripts
+├── docker-compose.yml # (Planned for deployment)
+├── README.md
+└── .gitignore
+
+
+---
+
+## Upcoming Work
+
+- Integration testing and performance optimization  
+- Dockerization and deployment  
+- Final documentation and evaluation  
+
+---
+
+## How to Run
+
+### 🔹 Backend
+
+```bash
+-cd backend
+-pip install -r requirements.txt
+-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+### 🔹 Frontend
+
+```bash
+-cd frontend
+-pip install -r requirements.txt
+-streamlit run streamlit_app.py
+
+###👉 Streamlit UI: http://localhost:8501
+
+##Notes
+-Dataset images are not included in the repository (ignored via .gitignore)
+-FAISS index files are generated dynamically
+-Runs fully on CPU (no GPU required)
+
+
