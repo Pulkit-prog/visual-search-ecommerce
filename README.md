@@ -132,3 +132,5 @@ Top Similar Products Displayed
 - ⚡ Fast and scalable architecture  
 - 🛒 Real-world e-commerce use case  
 
+## Major project for IBM
+

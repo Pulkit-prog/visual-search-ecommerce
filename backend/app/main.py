@@ -37,6 +37,8 @@ def rebuild_catalog_index():
 # ------------------------------------------------
 # Search similar images
 # ------------------------------------------------
+# System will try to search for similar images
+
 @app.post("/search")
 async def search_image(file: UploadFile = File(...)):
 
